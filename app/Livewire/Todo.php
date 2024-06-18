@@ -22,7 +22,7 @@ class Todo extends Component
 
     public function addTodo()
     {
-        $validated = $this->validateOnly('todo');
+        $validated = $this->validateOnly('todo'); // ここにviewでバインドされた値が飛んでくる
         $this->repo->save($validated);
         $this->todo = "";
     }
